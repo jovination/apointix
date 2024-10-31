@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import Logo from "@/public/logo.png"
-import GoogleIcon from "@/public/google.svg"
-import GithubIcon  from "@/public/github.svg";
+
+import { signIn } from "../lib/auth";
+import { GithubAuthButton, GoogleAuthButton } from "./SubmitButtons";
 
 export function AuthModal(){
     return(
@@ -23,10 +24,15 @@ export function AuthModal(){
 
             </DialogHeader>
             <div className="flex flex-col mt-5 gap-4">
-                <Button className="flex items-center gap-4" variant="outline">
-                     <Image src={GoogleIcon} alt="Google Icon" className="size-4" />
-                   <span> Sign with Google </span>
-                </Button>
+                 <form action={
+                   async () =>{
+                    "use server"
+                    await signIn("google");
+                   }} className="w-full">
+                    
+                    <GoogleAuthButton />
+               
+                </form>
                 <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t border-gray-300" />
@@ -35,10 +41,14 @@ export function AuthModal(){
               <span className="bg-white px-2 text-gray-500">or</span>
             </div>
           </div>
-                <Button className="flex items-center gap-4" variant="outline">
-                    <Image src={GithubIcon} alt="github icon"  className="size-5" />      
-                   <span> Sign with Github </span>
-                </Button>
+          <form action={
+                   async () =>{
+                    "use server"
+                    await signIn("github");
+                   }} className="w-full">
+                   
+               <GithubAuthButton />
+                </form>
                 <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t border-gray-300" />

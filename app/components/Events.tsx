@@ -21,16 +21,16 @@ export  function Events() {
         </Button>
       </div>
       <div className="px-1 py-4">
-        <div className="relative w-64">
+        <div className="relative w-64 ">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input 
             placeholder="Search" 
-            className="pl-8" 
+            className="bg-muted pl-8" 
             aria-label="Search event types"
           />
         </div>
       </div>
-      <div className="flex-1 flex items-center justify-center p-8 border-dashed border rounded-md w-full ">
+      <div className="flex-1 flex items-center justify-center p-8 border-dashed border rounded-md mt-2 ">
         <div className="text-center space-y-5">
           <div className="mx-auto size-20 bg-muted rounded-full flex items-center justify-center">
             <Link className="h-8 w-8 text-muted-foreground" />

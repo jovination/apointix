@@ -15,6 +15,7 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import ModeToggle from '@/components/ui/ModeToggle';
+import { Events } from '@/app/components/Events'
 
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
@@ -91,7 +92,9 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         </aside>
         
         <main className="flex-1 overflow-auto p-4">
-          {children}
+        <main className="flex-1 overflow-auto">
+          {activeTab === 'events' ? <Events /> : children}
+        </main>
         </main>
       </div>
     </ThemeProvider>

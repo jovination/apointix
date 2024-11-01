@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Plus, Search, Link2 } from 'lucide-react'
+import { Plus, Search, Link } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -33,7 +33,7 @@ export  function Events() {
       <div className="flex-1 flex items-center justify-center p-8 border-dashed border rounded-md w-full ">
         <div className="text-center space-y-5">
           <div className="mx-auto size-20 bg-muted rounded-full flex items-center justify-center">
-            <Link2 className="h-8 w-8 text-muted-foreground" />
+            <Link className="h-8 w-8 text-muted-foreground" />
           </div>
           <div className="space-y-2">
             <h2 className="text-xl font-semibold">Create your first event type</h2>

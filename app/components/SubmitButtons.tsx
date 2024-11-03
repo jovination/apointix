@@ -17,7 +17,7 @@ export function GoogleAuthButton(){
             </Button>
         ): (
             <Button className="w-full flex items-center gap-4" variant="outline">
-                     <Image src={GoogleIcon} alt="Google Icon" className="size-4" />
+                     <Image src={GoogleIcon} alt="Google Icon" className="size-4 " />
                    <span> Sign with Google </span>
         </Button>
         )}
@@ -38,7 +38,7 @@ export function GithubAuthButton(){
             </Button>
         ): (
             <Button className="w-full flex items-center gap-4" variant="outline">
-            <Image src={GithubIcon} alt="github icon"  className="size-5" />      
+            <Image src={GithubIcon} alt="github icon"  className="size-5 dark:invert" />      
             <span> Sign with Github </span>
             </Button>
         )}

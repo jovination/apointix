@@ -26,7 +26,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="system"
       enableSystem
       disableTransitionOnChange
     >

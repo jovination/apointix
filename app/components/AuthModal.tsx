@@ -5,6 +5,7 @@ import Logo from "@/public/logo.png"
 
 import { signIn } from "../lib/auth";
 import { GithubAuthButton, GoogleAuthButton } from "./SubmitButtons";
+import { SignWithEmail } from "./SignWithEmail"
 
 export function AuthModal(){
     return(
@@ -33,14 +34,13 @@ export function AuthModal(){
                     <GoogleAuthButton />
                
                 </form>
-                <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center text-xs ">
-              <span className="bg-white px-2 text-gray-500">or</span>
-            </div>
-          </div>
+                <div className="flex items-center gap-2">
+  <div className="flex-1 border-t border-[bg-muted]" />
+  <span className="px-2 text-[bg-muted]">or</span>
+  <div className="flex-1 border-t border-[bg-muted]" />
+</div>
+
+
           <form action={
                    async () =>{
                     "use server"
@@ -49,17 +49,13 @@ export function AuthModal(){
                    
                <GithubAuthButton />
                 </form>
-                <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center text-xs ">
-              <span className="bg-white px-2 text-gray-500">or</span>
-            </div>
-          </div>
-          <Button>
-            Continue with Email
-          </Button>
+                <div className="flex items-center gap-2">
+  <div className="flex-1 border-t border-[bg-muted]" />
+  <span className="px-2 text-[bg-muted]">or</span>
+  <div className="flex-1 border-t border-[bg-muted]" />
+</div>
+         
+         <SignWithEmail />
 
             </div>
 
